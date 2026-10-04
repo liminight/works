@@ -5,7 +5,6 @@ void freeMatrix(int **a, int rows)
 {
     if (!a)
         return;
-
     for (int i = 0; i < rows; ++i)
     {
         delete[] a[i];
@@ -16,7 +15,6 @@ void freeMatrix(int **a, int rows)
 int main()
 {
     int lines, columns;
-
     if (!(std::cin >> lines >> columns) || lines <= 0 || columns <= 0)
     {
         return 1;
@@ -55,6 +53,7 @@ int main()
             }
         }
     }
+    std::cout << '\n';
     for (int j = 0; j < columns; ++j)
     {
         for (int i = 0; i < lines; ++i)
