@@ -55,4 +55,16 @@ int main()
             }
         }
     }
+    for (int j = 0; j < columns; ++j)
+    {
+        for (int i = 0; i < lines; ++i)
+        {
+            if (i > 0)
+                std::cout << ' ';
+            std::cout << a[i][j];
+        }
+        std::cout << '\n';
+    }
+    freeMatrix(a, lines);
+    return 0;
 }
