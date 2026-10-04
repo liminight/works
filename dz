@@ -21,4 +21,16 @@ int main()
     {
         return 1;
     }
+
+    int **a = new (std::nothrow) int *[lines];
+
+    if (!a)
+    {
+        return 2;
+    }
+
+    for (int i = 0; i < lines; ++i)
+    {
+        a[i] = nullptr;
+    }
 }
