@@ -12,3 +12,13 @@ void freeMatrix(int **a, int rows)
     }
     delete[] a;
 }
+
+int main()
+{
+    int lines, columns;
+
+    if (!(std::cin >> lines >> columns) || lines <= 0 || columns <= 0)
+    {
+        return 1;
+    }
+}
