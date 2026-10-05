@@ -67,3 +67,4 @@ int main()
     freeMatrix(a, lines);
     return 0;
 }
+// исправлено
