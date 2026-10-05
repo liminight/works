@@ -3,7 +3,7 @@
 
 void freeMatrix(int **a, int rows)
 {
-    if (!a)
+    if (a == nullptr)
         return;
     for (int i = 0; i < rows; ++i)
     {
@@ -14,15 +14,15 @@ void freeMatrix(int **a, int rows)
 
 int main()
 {
-    int lines, columns;
-    if (!(std::cin >> lines >> columns) || lines <= 0 || columns <= 0)
+    size_t lines = 0, columns = 0;
+    if (!(std::cin >> lines >> columns))
     {
         return 1;
     }
 
     int **a = new (std::nothrow) int *[lines];
 
-    if (!a)
+    if (a == nullptr)
     {
         return 2;
     }
@@ -35,7 +35,7 @@ int main()
     for (int i = 0; i < lines; ++i)
     {
         a[i] = new (std::nothrow) int[columns];
-        if (!a[i])
+        if (a[i] == nullptr)
         {
             freeMatrix(a, i);
             return 2;
